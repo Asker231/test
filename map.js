@@ -3,7 +3,7 @@ const btn = document.querySelector("button");
 const nom = document.querySelector("#nom");
 const vOne = document.querySelector(".value_one");
 const vtwo = document.querySelector(".value_two");
-const main = document.querySelector(".main");
+
 
 btn.addEventListener("click", out);
 let courses = [
