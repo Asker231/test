@@ -1,8 +1,10 @@
-const em = document.querySelector("#em");
+const rangeOne = document.querySelector("#rangeOne");
 const btn = document.querySelector("button");
-const nom = document.querySelector("#nom");
+const rangeTwo = document.querySelector("#rangeTwo");
 const vOne = document.querySelector(".value_one");
 const vtwo = document.querySelector(".value_two");
+const outPrice = document.querySelector('.outPrice');
+
 
 
 btn.addEventListener("click", out);
@@ -18,18 +20,19 @@ let courses = [
 ];
 
 function out() {
-  const m = courses.map((el) => {
-    return el.prices.filter((el)=>el > em.value && el < nom.value
-    )
+  const fillterCourses = courses.map((el) => {
+    el.filter((elem)=>elem.prices > rangeOne.value && elem.prices < rangeTwo.value)
+    return  fillterCourses.name;
   });
-  console.log(m);
+  console.log(fillterCourses);
 }
 function valueRange() {
-  em.onchange = () => {
-    vOne.innerHTML = em.value;
-  };
-  nom.onchange = () => {
-    vtwo.innerHTML = nom.value;
-  };
+  rangeOne.addEventListener('input',()=>{
+    vOne.innerHTML = rangeOne.value;
+  })
+ rangeTwo.addEventListener('input',()=>{
+  vtwo.innerHTML = rangeTwo.value;
+ })
+
 }
 valueRange();

@@ -18,10 +18,11 @@
       .container {
         position: relative;
         top: 30px;
+        width: 400px;
         border-radius: 20px;
         display: flex;
         flex-direction: column;
-        gap: 4px;
+        gap: 14px;
         margin: 0 auto;
         justify-content: center;
         align-items: center;
@@ -35,19 +36,22 @@
         cursor: pointer;
       }
       input {
+        padding: 0px;
+        
         position: relative;
       }
       .wrap_one {
         position: absolute;
         left: 10px;
-        top: 40px;
+        top: 10px;
         display: flex;
         gap: 12px;
-        width: 100px;
+        width: 50px;
         padding: 5px 10px;
         background-color: blueviolet;
         border-radius: 20px;
         color: aliceblue;
+        padding: 5px 10px;
       }
       .wrap_two {
         display: flex;
@@ -56,8 +60,8 @@
         position: absolute;
         border-radius: 20px;
         left: 10px;
-        top: 100px;
-        width: 100px;
+        top: 60px;
+        width: 50px;
         padding: 5px 10px;
         background-color: blueviolet;
       }
@@ -66,19 +70,21 @@
   <body>
     <div class="container">
       <div class="wrap_one">
-        <span>От :</span>
+        <span>От:</span>
         <div class="value_one">0</div>
       </div>
-      <input type="range" id="em" min="0" max="500" />
-      <input id="nom" type="range" min="0" max="500" />
+      <input type="range" id="rangeOne" min="0" max="500" />
+      <input id="rangeTwo" type="range" min="0" max="500" />
       <div class="wrap_two">
-        <span>До :</span>
+        <span>До:</span>
         <div class="value_two">0</div>
       </div>
 
       <button>Send</button>
     </div>
+   <div class="outPrise">
 
+   </div>
     <script src="./map.js"></script>
   </body>
 </html>
